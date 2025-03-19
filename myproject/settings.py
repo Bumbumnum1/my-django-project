@@ -27,9 +27,11 @@ SECRET_KEY = 'django-insecure-6!dl&uv4%739k6=6u$xt1@cr3api!!-h)l29@at$6-#a!ob&j=
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "my-django-project.onrender.com",
-    os.getenv("ALLOWED_HOSTS", "localhost"),
+    "localhost",
+    "127.0.0.1",
+    "my-django-project-51pg.onrender.com"
 ]
+
 
 
 
