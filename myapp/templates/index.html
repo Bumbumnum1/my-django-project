@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Page</title>
@@ -16,7 +17,6 @@
                             style="background: linear-gradient(to right, rgb(0, 0, 0), rgb(161, 29, 205)); height: 200px;">
 
                             <div class="ms-4 mt-5 d-flex flex-column" style="width: 150px;">
-                                {% load static %}
                                 <img src="{% static 'images/kurt.jpg' %}"
                                     alt="Generic placeholder image" class="img-fluid img-thumbnail mt-4 mb-2"
                                     style="width: 150px; z-index: 1">
