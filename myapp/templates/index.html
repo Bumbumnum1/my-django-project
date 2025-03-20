@@ -5,85 +5,199 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Page</title>
+    
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+    
+    <style>
+        /* Footer Styling */
+        .footer {
+            background: linear-gradient(to right, rgb(0, 0, 0), rgb(70, 25, 82));
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .footer a {
+            color: #bbb;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            color: #fff;
+        }
+
+        .follow-btn:hover {
+            color: black !important; /* Change text color to black */
+            background-color: white !important; /* Change background to white */
+        }
+        
+    </style>
 </head>
 <body>
+    
     <section class="h-100 gradient-custom-2">
         <div class="container py-5 h-100">
             <div class="row d-flex justify-content-center">
                 <div class="col col-lg-9 col-xl-8">
                     <div class="card">
-                        <div class="rounded-top text-white d-flex flex-row"
-                            style="background: linear-gradient(to right, rgb(0, 0, 0), rgb(161, 29, 205)); height: 200px;">
+                        <div class="rounded-top text-white d-flex flex-row align-items-center justify-content-between px-4"
+                        style="background: linear-gradient(to right, rgb(0, 0, 0), rgb(161, 29, 205)); height: 200px;">
 
-                            <div class="ms-4 mt-5 d-flex flex-column" style="width: 150px;">
-                                <img src="{% static 'images/kurt_portrait.jpg' %}"
-                                    alt="Generic placeholder image" class="img-fluid img-thumbnail mt-4 mb-2"
-                                    style="width: 150px; z-index: 1">
-
-                                <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-dark text-body" data-mdb-ripple-color="dark" style="z-index: 1;" onclick="window.location.href='https://www.facebook.com/kurtrussel.destrajo';">
-                                    Follow
-                                </button>
-
+                        <div class="d-flex flex-row align-items-center">
+                            <div class="me-3">
+                                <img src="{% static 'images/kurt_portrait.jpg' %}" alt="Profile Picture"
+                                    class="img-fluid img-thumbnail mt-4 mb-2" style="width: 150px; z-index: 1">
                             </div>
-                            <div class="ms-3" style="margin-top: 130px;">
-                                <h5>Kurt Russel Destrajo</h5>
-                                <p>Tacloban</p>
+                            <div>
+                                <h5 class="mb-1">Kurt Russel Destrajo</h5>
+                                <p class="mb-0">Tacloban</p>
                             </div>
-                            
                         </div>
+                        <button type="button" class="btn btn-outline-light text-white me-4 follow-btn"
+                            onclick="window.location.href='https://www.facebook.com/kurtrussel.destrajo';">
+                            Follow
+                        </button>
+
+                        </div>
+
                         <div class="p-4 text-black bg-body-tertiary">
-                            <div class="d-flex justify-content-end text-center py-1 text-body">
-                                <div>
+                            <div class="row text-center py-1 text-body">
+                                <div class="col-4">
                                     <p class="mb-1 h5">4</p>
                                     <p class="small text-muted mb-0">Photos</p>
                                 </div>
-                                <div class="px-3">
-                                    <p class="mb-1 h5">1026</p>
+                                <div class="col-4">
+                                    <p class="mb-1 h5">471</p>
                                     <p class="small text-muted mb-0">Followers</p>
                                 </div>
-                                <div>
-                                    <p class="mb-1 h5">478</p>
+                                <div class="col-4">
+                                    <p class="mb-1 h5">239</p>
                                     <p class="small text-muted mb-0">Following</p>
                                 </div>
                             </div>
                         </div>
+                        
 
                         <div class="card-body p-4 text-black">
                             <div class="mb-5 text-body">
                                 <p class="lead fw-normal mb-1">About</p>
                                 <div class="p-4 bg-body-tertiary">
                                     <p class="font-italic mb-1">Computer Science Student</p>
-                                    <p class="font-italic mb-1">Lives Tacloban City</p>
-                                    <p class="font-italic mb-0">Software Engineer</p>
+                                    <p class="font-italic mb-1">Lives in Tacloban City</p>
+                                    <p class="font-italic mb-0">Software Developer</p>
                                 </div>
                             </div>
+
                             <div class="d-flex justify-content-between align-items-center mb-4 text-body">
-                                <p class="lead fw-normal mb-0">Recent photos</p>
+                                <p class="lead fw-normal mb-0">Recent Photos</p>
                             </div>
                             <div class="row g-2">
                                 <div class="col mb-2">
                                     <img src="{% static 'images/keyboard_gaming.jpg' %}" alt="image 1" class="w-100 rounded-3">
                                 </div>
                                 <div class="col mb-2">
-                                    <img src="{% static 'images/computer_1.jpg' %}" alt="image 1" class="w-100 rounded-3">
+                                    <img src="{% static 'images/computer_1.jpg' %}" alt="image 2" class="w-100 rounded-3">
                                 </div>
                             </div>
                             <div class="row g-2">
                                 <div class="col">
-                                    <img src="{% static 'images/computer_2.jpg' %}" alt="image 1" class="w-100 rounded-3">
+                                    <img src="{% static 'images/computer_2.jpg' %}" alt="image 3" class="w-100 rounded-3">
                                 </div>
                                 <div class="col">
-                                    <img src="{% static 'images/keyboard_alt.jpg' %}" alt="image 1" class="w-100 rounded-3">
+                                    <img src="{% static 'images/keyboard_alt.jpg' %}" alt="image 4" class="w-100 rounded-3">
                                 </div>
                             </div>
+                        </div>
+
+                        <div class="card-body p-4 text-black">
+                            <!-- Education -->
+                            <div class="mb-5 text-body">
+                                <p class="lead fw-normal mb-1">Education</p>
+                                <div class="p-4 bg-body-tertiary">
+                                    <p class="font-italic mb-1">BS Computer Science, <strong>ACLC Tacloban</strong></p>
+                                    <p class="font-italic mb-1">Graduating in 2026</p>
+                                </div>
                             </div>
+
+                            <!-- Work Experience -->
+                            <div class="mb-5 text-body">
+                                <p class="lead fw-normal mb-1">Work Experience</p>
+                                <div class="p-4 bg-body-tertiary">
+                                    <p class="font-italic mb-1"><strong>Freelance Mobile Developer</strong> (2024 - Present)</p>
+                                    <p class="font-italic mb-1"><strong>Electrician</strong> (2018 - Present)</p>
+                                    <p class="font-italic mb-1"><strong>Plumber</strong> (2017 - Present)</p>
+                                    <p class="font-italic mb-1"><strong>Mechanic</strong> (2017 - Present)</p>
+                                    <p class="font-italic mb-1"><strong>Carpenter</strong> (2015 - Present)</p>
+                                    <p class="font-italic mb-1"><strong>Farmer</strong> (2007 - 2019)</p>
+                                </div>
+                            </div>
+
+                            <!-- Projects Section -->
+                            <div class="mb-5 text-body">
+                                <p class="lead fw-normal mb-1">Projects</p>
+                                <div class="p-4 bg-body-tertiary">
+                                    <ul>
+                                        <li><strong>EZakay</strong> - Real-time PUV tracking app (Thesis Project)</li>
+                                        <li><strong>Library Management System</strong> - System for Library Management</li>
+                                        <li><strong>Notepad AI</strong> - AI-integrated notepad</li>
+                                        <li><strong>Water Level Monitoring</strong> - IoT-based water level monitoring app</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Hobbies -->
+                            <div class="mb-5 text-body">
+                                <p class="lead fw-normal mb-1">Hobbies</p>
+                                <div class="p-4 bg-body-tertiary">
+                                    <p class="font-italic mb-1"><strong>Gaming:</strong> Valorant, Counter-Strike 2, GTA V, Dota, Roblox</p>
+                                    <p class="font-italic mb-1"><strong>Music:</strong> Playing the guitar, listening to music</p>
+                                    <p class="font-italic mb-1"><strong>Tech:</strong> Coding, fixing anything broken</p>
+                                    <p class="font-italic mb-1"><strong>Fitness:</strong> Cycling, gym</p>
+                                    <p class="font-italic mb-1"><strong>Entertainment:</strong> Watching anime</p>
+                                    <p class="font-italic mb-1"><strong>Food:</strong> Eating</p>
+                                </div>
+                            </div>
+
+
+                            <!-- Tech Stack -->
+                            <div class="mb-5 text-body">
+                                <p class="lead fw-normal mb-1">Tech Stack</p>
+                                <div class="p-4 bg-body-tertiary">
+                                    <p class="font-italic mb-1"><strong>Frontend:</strong> Flutter, Dart, HTML, CSS, JavaScript, React.js</p>
+                                    <p class="font-italic mb-1"><strong>Backend:</strong> Django, Python, PHP</p>
+                                    <p class="font-italic mb-1"><strong>Database:</strong> Firebase, MySQL, Supabase</p>
+                                    <p class="font-italic mb-1"><strong>Tools:</strong> VS Code, Render (for hosting)</p>
+                                    <p class="font-italic mb-1"><strong>Other Skills:</strong> Assembly (emu8086), Web Development, B4A, B4X</p>
+                                    <p class="font-italic mb-1"><strong>Programming Languages:</strong> Java, C++, Haxe</p>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Footer -->
+    <footer class="footer mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="lead fw-normal">Contact & Social Media</p>
+                    <p><i class="bi bi-envelope"></i> Email: <a href="mailto:kurtrusseldestrajo@gmail.com">kurtrusseldestrajo@gmail.com</a></p>
+                    <p><i class="bi bi-github"></i> GitHub: <a href="https://github.com/Bumbumnum1" target="_blank">Bumbumnum1</a></p>
+                    <p><i class="bi bi-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/kurt-russel-destrajo-36074a32a/" target="_blank">kurt-russel-destrajo</a></p>
+                    <p>&copy; 2025 Kurt Russel Destrajo | All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
